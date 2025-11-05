@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ client.name }} - Info</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="brand">
+            <div class="logo">FA</div>
+            <div>
+                <div class="title">Client Information</div>
+                <div class="sub">{{ client.name }}</div>
+            </div>
+        </div>
+        <a href="/web/projects" class="btn secondary">← Back to Projects</a>
+    </header>
+
+    <section class="info-section">
+        <h1>Client Details</h1>
+        <p><strong>Name:</strong> {{ client.name }}</p>
+        <p><strong>Email:</strong> {{ client.email }}</p>
+        <p><strong>Phone:</strong> {{ client.phone }}</p>
+        <p><strong>Company:</strong> {{ client.company_name }}</p>
+        <p><strong>Address:</strong> {{ client.address }}</p>
+    </section>
+
+    <section class="table-section">
+        <h2>Projects by {{ client.name }}</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Status</th>
+                    <th>Budget</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for project in projects %}
+                <tr>
+                    <td>{{ project.id }}</td>
+                    <td>{{ project.title }}</td>
+                    <td>{{ project.status }}</td>
+                    <td>${{ project.budget }}</td>
+                    <td>{{ project.start_date }}</td>
+                    <td>{{ project.end_date }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+    <div class="dashboard-actions">
+        <a href="/web/clients" class="btn">Back to Clients</a>
+        <a href="/web/projects" class="btn secondary">Back to Projects</a>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="brand">
+                <div class="logo">FA</div>
+                <div>
+                    <div class="title">Freelance Admin</div>
+                    <div class="sub">Dashboard Overview</div>
+                </div>
+            </div>
+        </header>
+
+        <section class="dashboard-grid">
+            <div class="card highlight">
+                <h2>Total Projects</h2>
+                <p>18</p>
+            </div>
+            <div class="card">
+                <h2>Active Clients</h2>
+                <p>12</p>
+            </div>
+            <div class="card">
+                <h2>Pending Invoices</h2>
+                <p>4</p>
+            </div>
+            <div class="card">
+                <h2>Total Revenue</h2>
+                <p>$25,400</p>
+            </div>
+        </section>
+
+        <div class="dashboard-actions">
+            <a href="/web/clients" class="btn">View Clients</a>
+            <a href="/web/projects" class="btn secondary">View Projects</a>
+        </div>
+
+        <footer class="footer">
+            © 2025 Freelance — All Rights Reserved
+        </footer>
+    </div>
+</body>
+</html>
