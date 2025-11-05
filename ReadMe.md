@@ -28,5 +28,5 @@ A complete **Freelance Project Tracker** built using **FastAPI**, **SQLAlchemy**
 
 ### 1. Clone this repository
 ```bash
-git clone https://github.com/<your-username>/FreelanceProjectTracker.git
+git clone https://github.com/MussabR/FreelanceProjectTracker.git
 cd FreelanceProjectTracker
